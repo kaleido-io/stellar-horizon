@@ -41,7 +41,7 @@ jobs:
   integration:
     name: Integration tests
     strategy:
-      matrix: ${{ inputs.full_matrix && fromJSON('{"os":["ubuntu-24.04"],"go":["1.25","1.26"],"pg":[14,16]}') || fromJSON('{"os":["ubuntu-24.04"],"go":["1.26"],"pg":[16]}') }}
+      matrix: ${{ inputs.full_matrix && fromJSON('{"os":["ubuntu-24.04"],"go":["1.26"],"pg":[14,16]}') || fromJSON('{"os":["ubuntu-24.04"],"go":["1.26"],"pg":[16]}') }}
     runs-on: ${{ matrix.os }}
     services:
       postgres:
