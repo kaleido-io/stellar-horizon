@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0 # required for new-from-rev option in .golangci.yml
       - uses: ./.github/actions/setup-go
         with:
-          go-version: "1.25"
+          go-version: "1.26"
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v7
         with:
